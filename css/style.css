@@ -1,0 +1,128 @@
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    font-size: .9375rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: var(--grayish-blue);
+    background-color: var(--very-light-gray);
+}
+
+main{
+    margin-block: 4.875rem;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    text-align: center;
+    max-width: 33.75rem;
+}
+
+.header-body{
+    line-height: 1.5625rem;
+    letter-spacing: .1px;
+    margin-top: 1rem;
+}
+
+h1, h2, h3{
+    font-size: clamp(1.5rem, 1.236rem + 1.127vw, 2.25rem);
+    font-weight: 275;
+    line-height: 2.25rem;
+    letter-spacing: .17px;
+    color: var(--very-dark-blue);
+}
+
+h2{
+    font-weight: 600;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+}
+
+.card{
+    font-weight: 400;
+    font-size: .8125rem;
+    line-height: 1.4375rem;
+    letter-spacing: .09px;
+    background-color: white;
+    padding: 1.75rem;
+    border-radius: 4px;
+    box-shadow: 0px 10px 10px hsla(229, 6%, 66%, .3);
+    max-width: 350px;
+}
+
+.svg-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 2.0625rem;
+}
+
+#card-supervisor{
+    border-top: 3px solid var(--cyan);
+}
+
+#card-teambuilder{
+    border-top: 3px solid var(--red);
+}
+
+#card-karma{
+    border-top: 3px solid var(--orange);
+}
+
+#card-calculator{
+    border-top: 3px solid var(--blue);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-block: 4.75rem;
+}
+
+.grid-middle{
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 40rem){
+    h1, h2{
+        font-size: 2.25rem;
+        line-height: 3.375rem;
+    }
+
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-left, .grid-middle, .grid-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
